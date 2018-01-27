@@ -8,7 +8,7 @@
 //     https://alliedmods.net/amxmodx-license
 
 //
-// Vault Functions
+// Функции хранилища
 //
 
 #if defined _vault_included
@@ -16,16 +16,16 @@
 #endif
 #define _vault_included
 
-/* Reads a data from given key.
-* If len is set to zero then get_vaultdata
-* returns value as an number. */
+/* Считывает данные из данного ключа.
+* Если длина сообщения равна нулю, тогда get_vaultdata
+* возвращает значение как число. */
 native get_vaultdata(const key[], data[] = "", len = 0);
 
-/* Sets a data under given key. */
+/* Устанавливает данные по заданному ключу. */
 native set_vaultdata(const key[], const data[] = "");
 
-/* Removes a key from vault.*/
+/* Удаляет ключ из хранилища. */
 native remove_vaultdata(const key[]);
 
-/* Checks if a key exists in the vault.*/
+/* Проверяет, существует ли ключ в хранилище. */
 native vaultdata_exists(const key[]);
