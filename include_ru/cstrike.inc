@@ -24,28 +24,26 @@
 #include <cstrike_const>
 
 /**
- * Returns client's deaths.
+ * Возвращает кол-во смертей клиента.
  *
- * @param index     Client index
+ * @param index     Индекс клиента
  *
- * @return          Client deaths
- * @error           If the client index is not within the range of 1 to
- *                  MaxClients, or the client is not connected, an error will be
- *                  thrown.
+ * @return          Смерти клиента
+ * @error           Если индекс клиента не находится в диапазоне от 1 до
+ *                  MaxClients, или или клиент не подключени, будет выброшена ошибка.
  */
 native cs_get_user_deaths(index);
 
 /**
- * Sets client's deaths.
+ * Устанавливает кол-во смертей клиенту.
  *
- * @param index         Client index
- * @param newdeaths     New value to set
- * @param scoreboard    If true the scoreboard will be updated to reflect the new value.
+ * @param index         Индекс клиента
+ * @param newdeaths     Новое значение для установки
+ * @param scoreboard    Если `true` - таблица счёта будет обновлена новым значением.
  *
  * @noreturn
- * @error               If the client index is not within the range of 1 to
- *                      MaxClients, or the client is not connected, an error
- *                      will be thrown.
+ * @error               Если индекс клиента не находится в диапазоне от 1 до
+ *                  	MaxClients, или или клиент не подключени, будет выброшена ошибка.
  */
 native cs_set_user_deaths(index, newdeaths, bool:scoreboard = true);
 
